@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>パスワード</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <!-- パスワード入力画面 -->
+    <form id="password-form" class="form" autocomplete="off">
+      <!-- タイトルの文言は script.js の TITLE_TEXT で変更できます -->
+      <h1 id="title">パスワードを入力してください</h1>
+      <input
+        id="password-input"
+        class="input"
+        type="password"
+        inputmode="text"
+        placeholder="パスワード"
+        aria-label="パスワード"
+        autofocus
+      >
+      <button type="submit" class="button">確認</button>
+      <!-- 不正解時のメッセージがここに表示されます -->
+      <p id="error-message" class="error" role="alert"></p>
+    </form>
+
+    <!-- 正解時に表示される画面（最初は非表示） -->
+    <section id="success" class="success" hidden>
+      <h2 id="success-message">正解！</h2>
+      <img id="success-image" class="success-image" alt="正解の画像">
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
